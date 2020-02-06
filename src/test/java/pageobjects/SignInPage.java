@@ -21,7 +21,8 @@ public class SignInPage extends TestBase {
 
     @FindBy(css = "#center_column .page-heading") private WebElement authenticationLabel;
 
-    @Override public boolean isLoaded() {
+    @Override 
+    public boolean isLoaded() {
         return authenticationLabel.getText().equals("AUTHENTICATION");
     }
 

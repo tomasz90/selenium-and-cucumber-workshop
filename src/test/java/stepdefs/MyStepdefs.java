@@ -85,7 +85,7 @@ public class MyStepdefs {
         assertTrue(myAccountPage.isLoaded());
     }
 
-    @When("^I add any product from (women|dresses|t-shirts) section$") public void iAddAnyProductFormWomanSection(String section) {
+    @When("^I add any product from (women|dresses|t-shirts) section$") public void iAddAnyProductFromWomanSection(String section) {
         homePage.goToSection(section);
         assertTrue("productPage wasn't loaded", productsPage.isLoaded());
         productsPage.addToCart();

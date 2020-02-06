@@ -6,7 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@Log4j public class HomePage extends TestBase {
+@Log4j 
+public class HomePage extends TestBase {
 
     @FindBy(className = "login") private WebElement signInButton;
 
@@ -22,7 +23,8 @@ import org.openqa.selenium.support.FindBy;
 
     private By accountButton = By.className("account");
 
-    @Override public boolean isLoaded() {
+    @Override 
+    public boolean isLoaded() {
         return isPresent(logo);
     }
 

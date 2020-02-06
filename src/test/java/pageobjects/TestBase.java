@@ -8,7 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.DriverManager;
 
-@Log4j public abstract class TestBase extends PageFactory {
+@Log4j 
+public abstract class TestBase extends PageFactory {
 
     private static WebDriver driver;
 

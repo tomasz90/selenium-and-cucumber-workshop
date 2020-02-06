@@ -32,7 +32,8 @@ public class CreateAccountPage extends TestBase {
 
     private By creationForm = By.id("account-creation_form");
 
-    @Override public boolean isLoaded() {
+    @Override 
+    public boolean isLoaded() {
         return isPresent(creationForm);
     }
 

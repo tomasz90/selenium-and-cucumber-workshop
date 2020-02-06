@@ -1,11 +1,13 @@
 package pageobjects;
 
-import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@Log4j public class CartPage extends TestBase {
+import lombok.extern.log4j.Log4j;
+
+@Log4j 
+public class CartPage extends TestBase {
 
     @FindBy(css = ".cart_navigation.clearfix .button") private WebElement proceedButton;
 
@@ -19,7 +21,8 @@ import org.openqa.selenium.support.FindBy;
 
     private By shoppingCartLabel = By.id("cart_title");
 
-    @Override public boolean isLoaded() {
+    @Override 
+    public boolean isLoaded() {
         return isPresent(shoppingCartLabel);
     }
 

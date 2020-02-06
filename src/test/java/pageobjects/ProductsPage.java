@@ -10,17 +10,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 @Log4j
 public class ProductsPage extends TestBase {
 
-    @FindBy(css = ".product_list > li:nth-child(1)")
-    private WebElement product;
+    @FindBy(css = ".product_list > li:nth-child(1)") private WebElement product;
 
-    @FindBy(css = ".clearfix .btn:nth-child(2) span")
-    private WebElement proceedButton;
+    @FindBy(css = ".clearfix .btn:nth-child(2) span") private WebElement proceedButton;
 
     private By productTable = By.cssSelector("#columns .row #center_column");
 
     private By addToCartButton = By.cssSelector(".button-container a:nth-child(1)");
 
-    @Override public boolean isLoaded() {
+    @Override 
+    public boolean isLoaded() {
         return isPresent(productTable);
     }
 
