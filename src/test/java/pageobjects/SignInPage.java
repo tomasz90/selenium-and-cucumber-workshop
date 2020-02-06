@@ -1,8 +1,10 @@
 package pageobjects;
 
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+@Log4j
 public class SignInPage extends TestBase {
 
     @FindBy(id = "email") private WebElement emailField;
@@ -24,14 +26,17 @@ public class SignInPage extends TestBase {
     }
 
     public void enterEmail(String s) {
+        log.info("Enter email: " + s);
         emailField.sendKeys(s);
     }
 
     public void enterPassword(String s) {
+        log.info("Enter password: " + s);
         passwordField.sendKeys(s);
     }
 
     public void submit() {
+        log.info("Click submit");
         submitButton.click();
     }
 
@@ -40,11 +45,14 @@ public class SignInPage extends TestBase {
     }
 
     public void createAccount() {
+        log.info("Create account");
         createAccountButton.click();
     }
 
     public void enterNewEmail() {
-        createEmailField.sendKeys(getRandom() + "@test.pl");
+        String email = getRandom() + "@test.pl";
+        log.info("Enter new email address: " + email);
+        createEmailField.sendKeys(email);
     }
 
     private double getRandom() {
