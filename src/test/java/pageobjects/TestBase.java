@@ -1,12 +1,13 @@
 package pageobjects;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.DriverManager;
 
 @Log4j 
 public abstract class TestBase extends PageFactory {
@@ -15,7 +16,8 @@ public abstract class TestBase extends PageFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            driver = DriverManager.getChromeDriver();
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
             setDriverOptions(driver);
         }
         return driver;
